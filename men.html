@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./layout.css">
 </head>
 <body>
+    <button><a href="./cart.html">CART</a></button>
     <h1>Mens wear</h1>
     <div id="container">
 
@@ -268,6 +269,8 @@
       originalPrice: 1799,
     },
   ];
+
+  var cartdata = JSON.parse(localStorage.getItem('cartdata')) || [];
    mensData.forEach(function(mendata)
    {
        var box = document.createElement('div');
@@ -287,6 +290,13 @@
 
        var addTOCart = document.createElement('button');
        addTOCart.innerText = 'Add to cart';
+
+       addTOCart.addEventListener('click', function()
+       {
+            cartdata.push(mendata);
+            alert("item added")
+            localStorage.setItem('cartdata', JSON.stringify(cartdata));
+       });
 
        box.append(img,name,originalPrice,price,addTOCart);
        document.querySelector('#container').append(box);

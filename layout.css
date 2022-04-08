@@ -11,6 +11,10 @@
     padding: 20px;
 }
 
+input
+{
+    margin: auto;
+}
 @media all and (min-width: 80px) and (max-width: 450px)
 {
     #container

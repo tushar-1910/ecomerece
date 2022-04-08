@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layout.css">
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+    <p>Enter promocode</p>
+    <input type="text"  id="promo" placeholder="Enter Promo code">
+    <button onclick="applypromo()">Apply Promo</button>
+    <p id="price"></p>
+</body>
+    <script>
+    var cartdata = JSON.parse(localStorage.getItem('cartdata')) || [];
+    var amount = cartdata.reduce(function(sum,ele)
+    {
+        return sum + Number(ele.price);
+    },0);
+    var count =0;
+    function applypromo()
+    {
+        var promocode = document.querySelector('#promo').value;
+        if(promocode == "masai30" && count==0)
+        {
+            count++;
+            alert('promocode applied')
+            amount -= amount*0.3;
+            document.querySelector('#price').innerText = "You have "+cartdata.length+" items in your cart and total amount is Rs. "+Math.floor(amount);
+        }
+        else{
+            alert('invalid promocode')
+        }
+    }
+    document.querySelector('#price').innerText = "You have "+cartdata.length+" items in your cart and total amount is Rs. "+amount;
+    cartdata.forEach(function(cartItem,cartindex)
+    {
+        var box = document.createElement('div');
+        box.setAttribute('class','box');
+ 
+        var img = document.createElement('img');
+        img.src = cartItem.image_url;
+ 
+        var name = document.createElement('p');
+        name.innerText = cartItem.name;
+ 
+        var originalPrice = document.createElement('p');
+        originalPrice.innerText = "Original Price: "+cartItem.originalPrice;
+ 
+        var price = document.createElement('p');
+        price.innerText = "Price: "+cartItem.price;
+ 
+        var addTOCart = document.createElement('button');
+        addTOCart.innerText = 'remove form cart';
+ 
+        addTOCart.addEventListener('click', function()
+        {
+            cartdata.splice(cartindex,1)
+            localStorage.setItem('cartdata', JSON.stringify(cartdata));
+            window.location.reload();
+        });
+ 
+        box.append(img,name,originalPrice,price,addTOCart);
+        document.querySelector('#container').append(box);
+    })
+ </script>
+</html>

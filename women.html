@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layout.css">
+</head>
+<body>
+    <h1>Womens wear</h1>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+     var womensData = [
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EY5060/reebok_EY5060_1.jpg.plp",
+      name: "women's reebok running austin shoes",
+      price: 1259,
+      originalPrice: 2599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EY2837/reebok_EY2837_1.jpg.plp",
+      name: "WOMEN'S REEBOK FITNESS SANSA FLIP FLOPS",
+      price: 509,
+      originalPrice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-H02297/reebok_H02297_1.jpg.plp",
+      name: " WOMEN'S REEBOK RUNNING ZIG DYNAMICA SHOES",
+      price: 2945,
+      originalPrice: 5099,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX8053/reebok_EX8053_1.jpg.plp",
+      name: "WOMEN'S REEBOK SWIM SUPER SOFT FLIP SLIPPERS",
+      price: 400,
+      originalPrice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-H00905/Reebok_H00905_1.jpg.plp",
+      name: "WOMEN'S REEBOK RUNNING LITE PLUS 3.0 SHOES",
+      price: 2999,
+      originalPrice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GY0157/reebok_GY0157_1.jpg.plp",
+      name: "WOMEN REEBOK FITNESS LITE 3 SHOES",
+      price: 2759,
+      originalPrice: 3199,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EB8150/Women_STUDIO_TIGHTS_EB8150_1.jpg.plp",
+      name: " WOMEN'S REEBOK STUDIO NATURE X SEAMLESS TIGHTS",
+      price: 1999,
+      originalPrice: 3199,
+    },
+    {
+      image_url:"https://content.shop4reebok.com/static/Product-GS1697/Reebok_GS1697_1.jpg.plp ",
+      name: "WOMEN REEBOK CLASSICS RIBBED T-SHIRT ",
+      price: 769,
+      originalPrice: 1099,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GJ2900/reebok_GJ2900_1.jpg.plp",
+      name: "WOMEN'S REEBOK TRAINING PRIME GRAPHIC TEE",
+      price: 299,
+      originalPrice: 440,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX8054/reebok_EX8054_1.jpg.plp",
+      name: "WOMEN'S REEBOK SWIM SUPER SOFT FLIP SLIPPERS",
+      price: 400,
+      originalPrice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GZ8253/reebok_GZ8253_1.jpg.plp ",
+      name: "WOMEN REEBOK TRAINING ADVANCED TRAINETTE SHOES ",
+      price: 2220,
+      originalPrice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-S42940/reebok_S42940_1.jpg.plp ",
+      name: "WOMEN REEBOK TRAINING CORE FLASHFILM TRAIN 2.0 SHOES ",
+      price: 3220,
+      originalPrice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FT1033/reebok_FT1033_1.jpg.plp ",
+      name: "WOMEN'S REEBOK RUNNING ONE SERIES RUNNING GRADIENT TEE",
+      price: 999,
+      originalPrice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GY8058/reebok_GY8058_1.jpg.plp ",
+      name: " WOMEN'S REEBOK CLASSICS CLUB C DOUBLE GEO SHOES",
+      price: 2900,
+      originalPrice: 3499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-H00024/reebok_H00024_1.jpg.plp ",
+      name: "UNISEX REEBOK RUNNING ZIG KINETICA II SHOES  ",
+      price: 9999,
+      originalPrice: 12000,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-HD6923/reebok_HD6923_1.JPG.plp ",
+      name: " WOMEN'S REEBOK WORKOUT READY RUN SPEEDWICK T-SHIRT",
+      price: 779,
+      originalPrice: 1299,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GR9478/reebok_GR9478_1.jpg.plp",
+      name: "MEN'S REEBOK TRAINING FOUNDATION  PANTS  ",
+      price: 1019,
+      originalPrice: 1699,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GK9176/reebok_GK9176_1.jpg.plp ",
+      name: "MEN'S REEBOK TRAINING FOUNDATION PANTS  ",
+      price: 1019,
+      originalPrice: 1699,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GR9443/reebok_GR9443_1.jpg.plp ",
+      name: "WOMEN REEBOK FITNESS & TRAINING MYT PRINTED LEGGINGS",
+      price: 1975,
+      originalPrice: 3499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FZ4928/reebok_FZ4928_1.jpg.plp ",
+      name: " WOMEN'S REEBOK CLASSICS CARDI B CLUB C SHOES ",
+      price: 3499,
+      originalPrice: 4999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GX5041/reebok_GX5041_1.jpg.plp ",
+      name: "UNISEX REEBOK CLASSICS MAISON MARGIELA CLASSIC LEATHER TABI HIGH SHOES",
+      price: 19949,
+      originalPrice: 39999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GW8324/Reebok_GW8324_1.jpg.plp  ",
+      name: " UNISEX REEBOK CLASSICS BEATNIK SHOES",
+      price: 4449,
+      originalPrice: 9999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GZ8253/reebok_GZ8253_1.jpg.plp ",
+      name: "WOMEN REEBOK TRAINING ADVANCED TRAINETTE SHOES ",
+      price: 2620,
+      originalPrice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GR9475/reebok_GR9475_1.jpg.plp ",
+      name: "WOMEN REEBOK FITNESS & TRAINING CAPRI TIGHTS",
+      price: 879,
+      originalPrice: 1299,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-HC1623/reebok_HC1623_1.jpg.plp ",
+      name: "WOMEN'S REEBOK CLASSICS F BIG LOGO FT HOODIE ",
+      price: 2499,
+      originalPrice: 4999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-CW1739/Women_TRAINING_SWEATSHIRT_LONG_SLEEVE_CW1739_1.jpg.plp  ",
+      name: "WOMEN'S REEBOK SPEEDWICK CREW NECK SWEATSHIRT ",
+      price: 1499,
+      originalPrice: 2999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FQ5364/reebok_FQ5364_1.jpg.plp   ",
+      name: " UNISEX REEBOK TRAINING ACTIVE  BAG ",
+      price: 1399,
+      originalPrice: 2799,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-DV9577/Women_TRAINING_SHOES_LOW_DV9577_1.jpg.plp",
+      name: "WOMEN'S REEBOK TRAINING FLEXAGON 2.0 FLEXWEAVE® LES MILLS® SHOES",
+      price: 2575,
+      originalPrice: 3499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-G57705/reebok_G57705_1.jpg.plp",
+      name: "UNISEX REEBOK CLASSICS  BASKETBALL SHOES",
+      price: 3919,
+      originalPrice: 5599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4141/reebok_EX4141_1.jpg.plp",
+      name: "WOMEN'S REEBOK WALKING WALK WAY COMFY SHOES",
+      price: 2220,
+      originalPrice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GY5326/reebok_GY5326_1.jpg.plp",
+      name: "UNISEX REEBOK DANIEL MOON CLASSIC LEATHER LEGACY SHOES",
+      price: 1620,
+      originalPrice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GX7520/reebok_GX7520_1.jpg.plp",
+      name: "WOMEN'S REEBOK CLASSICS CLUB C CLEATED MID SHOES",
+      price: 7599,
+      originalPrice: 9999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FZ3167/reebok_FZ3167_1.jpg.plp",
+      name: "UNISEX REEBOK CLASSIC SLIDE",
+      price: 1559,
+      originalPrice: 2299,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-GJ6191/reebok_GJ6191_1.jpg.plp",
+      name: "WOMEN'S REEBOK RUNNING TECHSTYLE RUNNING ACTIVCHILL T-SHIRT",
+      price: 979,
+      originalPrice: 1299,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-HD6926/reebok_HD6926_1.jpg.plp",
+      name: "WOMEN'S TRAINING WORKOUT READY COMM TEE",
+      price: 749,
+      originalPrice: 2499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-HD6914/reebok_HD6914_1.jpg.plp",
+      name: "WOMEN'S REEBOK TRAINING ESSENTIALS PIPING ZIP-UP HOODIE",
+      price: 1079,
+      originalPrice: 1799,
+    },
+  ];
+   womensData.forEach(function(womendata)
+   {
+       var box = document.createElement('div');
+       box.setAttribute('class','box');
+
+       var img = document.createElement('img');
+       img.src = womendata.image_url;
+
+       var name = document.createElement('p');
+       name.innerText = womendata.name;
+
+       var originalPrice = document.createElement('p');
+       originalPrice.innerText = "Original Price: "+womendata.originalPrice;
+
+       var price = document.createElement('p');
+       price.innerText = "Price: "+womendata.price;
+
+       var addTOCart = document.createElement('button');
+       addTOCart.innerText = 'Add to cart';
+
+       box.append(img,name,originalPrice,price,addTOCart);
+       document.querySelector('#container').append(box);
+   })
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container
+        {
+            height: 400px;
+            width: 400px;
+            border: 0.5px solid grey;
+            margin: auto;
+            padding: 10px;
+        }
+        p{
+            font-style:initial;
+            font-weight: bold;
+            margin-bottom: 1%;
+        }
+        input
+        {
+            height: 25px;
+            width: 90%;
+            border-radius: 4px;
+            /* border: none; */
+        }
+        img
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="data:image/png;base64,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" alt="">
+    <div id="container">
+        <h1>Create account</h1>
+        <form>
+            <p>Name</p>
+            <input type="text" id="name" placeholder="enter your name">
+            <p>Email</p>
+            <input type="text" id="email" placeholder="enter your email">
+            <p>password</p>
+            <input type="password" id="password" placeholder="enter your password">
+            <p>password must be at least 6 characters</p>
+            <br>
+            <input type="submit" value="register">
+        </form>
+    </div>
+</body>
+<script>
+    document.querySelector('form').addEventListener('submit', signup);
+    var userdata;
+    if(localStorage.getItem('userdata')=== null)
+    {
+        userdata=[];
+    }
+    else{
+        userdata = JSON.parse(localStorage.getItem('userdata'));
+    }
+    function signup()
+    {
+        event.preventDefault();
+        var userobj = 
+        {
+            name: document.querySelector('#name').value,
+            email: document.querySelector('#email').value,
+            password: document.querySelector('#password').value
+        }
+        userdata.push(userobj);
+        localStorage.setItem('userdata' , JSON.stringify(userdata));
+    }
+</script>
+</html>

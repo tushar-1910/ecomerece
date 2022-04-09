@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            height: 200px;
+            justify-content: space-between;
+        }
+        form>div
+        {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+        }
+        #container
+        {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            width: 550px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Enter payment details</h1>
+        <form>
+            <input type="number" id="cardNumber" placeholder="Enter your card number">
+            <div>
+                <input type="number" id="cvv" placeholder="Enter CVV">
+                <p>Enter expiry date</p>
+                <input type="month" id="expiry">
+            </div>
+            <input type="text" id="name" placeholder="Enter name">
+            <button id="payment">Complete payment</button>
+        </form>
+    </div>
+</body>
+<script>
+    document.querySelector('#payment').addEventListener('click',payment);
+    function payment()
+    {
+        event.preventDefault();
+        var cardNumber = document.querySelector('#cardNumber').value;
+        var cvv = document.querySelector('#cvv').value;
+        var expiry = document.querySelector('#expiry').value;
+        if(cardNumber.length == 16 && cvv.length==3 && expiry)
+        {
+            alert('enter the otp');
+            window.location.href = 'otp.html';
+        }
+        else{
+            alert('Enter correct details');
+        }
+    }
+</script>
+</html>
